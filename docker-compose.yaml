@@ -15,8 +15,9 @@ services:
     container_name: prometheus
     restart: unless-stopped
     environment:
-      - 'GF_SECURITY_ADMIN_PASSWORD=admin'
-      - 'GF_SECURITY_ADMIN_USER=cloudgeeks'
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=cloudgeeks
+      - GF_USERS_ALLOW_SIGN_UP=false
     ports:
       - 9090:9090
     volumes:
